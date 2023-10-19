@@ -13,7 +13,7 @@ mongoose
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://pandocs-client.vercel.app",
     methods: ["GET", "POST"],
   },
 });
