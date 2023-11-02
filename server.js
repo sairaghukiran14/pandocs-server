@@ -19,7 +19,7 @@ connectDB();
 const server = http.createServer(app);
 const port = process.env.PORT || 5000;
 const io = new Server(server, {
-  cors: "http://localhost:3000",
+  cors: "https://pandocs-client.vercel.app/",
   methods: ["GET", "POST"],
 });
 io.on("connection", (socket) => {
