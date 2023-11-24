@@ -12,7 +12,13 @@ import cors from "cors";
 import Document from "./models/Document.js";
 const defaultValue = "";
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: "https://pandocs-client.vercel.app/",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
+// app.use(cors());
 connectDB();
 // import Document from './models/Document.js';
 // import documentRouter from './routes/documentRouter.js';
